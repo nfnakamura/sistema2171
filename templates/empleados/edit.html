@@ -1,0 +1,28 @@
+Formulario para Editar
+{%for empleado in empleados %}
+<form method="post" action="/update" enctype="multipart/form-data">
+    
+
+    id:
+    <input type="text" name="txtID" value="{{empleado[0]}}" id="txtID">
+    <br>
+    Nombre:
+    <input type="text" name="txtNombre" value="{{empleado[1]}}" id="txtNombre">
+    <br>
+
+    Correo:
+    <input type="text" name="txtCorreo"  value="{{empleado[2]}}" id="txtCorreo">
+    <br>
+
+    Foto:
+    <input type="file" name="txtFoto" id="txtFoto">
+    <br>
+
+    <input type="submit" value="Agregar">
+
+
+
+</form>   
+
+
+{% endfor %}
